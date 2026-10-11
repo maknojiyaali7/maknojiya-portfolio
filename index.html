@@ -25,6 +25,110 @@ footer{padding:30px 0 40px;border-top:1px solid var(--line);color:var(--muted);f
 @keyframes float{0%,100%{transform:translateY(0) rotate(-3deg)}50%{transform:translateY(-12px) rotate(-1deg)}}@keyframes spin{to{transform:rotate(360deg)}}@keyframes pulse{50%{opacity:.45;box-shadow:0 0 5px var(--teal)}}
 @media(max-width:800px){.navlinks{display:none}.hero{grid-template-columns:1fr;padding:50px 0 70px;gap:20px}.visual{min-height:360px}.orbit.two{width:330px;height:330px}.orbit{width:280px;height:280px}.orb{width:270px;height:270px}.tag1{right:0}.tag2{left:0}.metrics{grid-template-columns:1fr}.metric+.metric{border-left:0;border-top:1px solid var(--line)}.metric{padding:15px 20px}.sectionhead{display:block}.sectionhead p{margin-top:15px}.projects,.services{grid-template-columns:1fr}.process{grid-template-columns:repeat(2,1fr)}.cta{padding:28px;display:block}.cta .btn{margin-top:10px}section{padding:70px 0}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;scroll-behavior:auto!important;transition:none!important}.reveal{opacity:1;transform:none}}
+
+/* Clean, cohesive portfolio theme — shared presentation only; project screenshot assets remain untouched. */
+:root{
+  --bg:#F7F8FA;--panel:#FFFFFF;--panel2:#F1F5F9;--text:#111827;--muted:#64748B;
+  --teal:#2563EB;--purple:#2563EB;--line:#E5E7EB;
+}
+html{scroll-behavior:smooth;scroll-padding-top:24px}
+body{background:#F7F8FA;color:#111827;line-height:1.65}
+a:focus-visible{outline:2px solid #2563EB;outline-offset:4px}
+.wrap{width:min(1160px,calc(100% - 48px))}
+.nav{padding:22px 0}
+.logo{color:#111827}
+.logo span{color:#2563EB}
+.navlinks{color:#64748B}
+.navlinks a:hover{color:#2563EB}
+.pill{border-color:#DCE2EA;background:#FFFFFF;color:#1F2937;transition:border-color .2s,background .2s}
+.pill:hover{border-color:#93B4F8;background:#EFF6FF}
+.hero{min-height:590px;gap:48px;padding:54px 0 76px}
+.eyebrow,.kicker{color:#2563EB}
+.dot{background:#2563EB;box-shadow:0 0 0 4px #DBEAFE;animation:none}
+h1{color:#111827;letter-spacing:-.055em}
+.gradient{background:none;color:#2563EB;-webkit-text-fill-color:#2563EB}
+.lead{color:#4B5563}
+.btn{border-radius:12px;transition:transform .2s,border-color .2s,background .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px)}
+.primary{background:#2563EB;color:#FFFFFF;box-shadow:0 5px 14px #2563EB20}
+.primary:hover{background:#1D4ED8;box-shadow:0 8px 20px #2563EB2A}
+.secondary{border:1px solid #DCE2EA;background:#FFFFFF;color:#1F2937}
+.secondary:hover{border-color:#93B4F8;background:#EFF6FF}
+.micro{color:#64748B}
+.visual{min-height:390px}
+.orb{width:300px;height:300px;background:#EAF1FF;filter:none;opacity:.9}
+.orbit{width:320px;height:320px;border-color:#DCE6F7;animation:none}
+.orbit:before{background:#2563EB;box-shadow:none}
+.orbit.two{width:385px;height:385px;border-style:solid;opacity:.6;animation:none}
+.codecard{width:min(360px,100%);border:1px solid #E1E7EF;border-radius:20px;background:#FFFFFF;padding:23px;box-shadow:0 18px 45px #0F172A12;transform:none;animation:none}
+.dots i{background:#CBD5E1}
+.code{color:#334155}
+.code .p{color:#2563EB}.code .g{color:#0F766E}.code .y{color:#B45309}
+.float-tag{border:1px solid #E2E8F0;background:#FFFFFF;color:#334155;box-shadow:0 8px 24px #0F172A0D}
+.tag1{top:40px;right:-2px}.tag2{bottom:35px;left:-2px}
+.metrics{border:1px solid #E5E7EB;border-radius:18px;background:#FFFFFF;box-shadow:0 4px 16px #0F172A05;margin-top:-12px}
+.metric{padding:24px 26px}
+.metric+.metric{border-left:1px solid #E5E7EB}
+.metric strong{color:#111827}.metric span{color:#64748B}
+section{padding:82px 0}
+.sectionhead{margin-bottom:30px}
+.sectionhead h2{color:#111827}
+.sectionhead p{color:#64748B}
+.projects{gap:22px}
+.project{padding:24px;border:1px solid #E5E7EB;border-radius:18px;background:#FFFFFF;box-shadow:0 3px 12px #0F172A04;transition:transform .22s,border-color .22s,box-shadow .22s}
+.project:hover{transform:translateY(-4px);border-color:#B8CCFA;box-shadow:0 12px 28px #0F172A0B}
+.project.featured{background:#FFFFFF;border-color:#DCE5F5}
+.project.featured:before{color:#2563EB}
+.projecttop{margin-bottom:20px}
+.projecticon{background:#EFF6FF;color:#2563EB}
+.tag{color:#1D4ED8;border-color:#DBEAFE;background:#EFF6FF}
+.project h3{color:#111827}
+.project p{color:#5B6474}
+.chips span{color:#475569;background:#F1F5F9;border:1px solid #E8EDF3}
+.projectvisual{border:1px solid #E5E7EB;border-radius:12px;background-color:#FFFFFF;box-shadow:0 2px 8px #0F172A04}
+.services{gap:18px}
+.service{padding:24px;border-radius:16px;border:1px solid #E5E7EB;background:#FFFFFF;box-shadow:0 3px 12px #0F172A04}
+.service .num{color:#2563EB}.service h3{color:#111827}.service p{color:#64748B}
+.stack span{border:1px solid #E2E8F0;background:#FFFFFF;color:#334155;border-radius:10px}
+.step{border-top:2px solid #BFDBFE}
+.step b{color:#2563EB}.step h3{color:#111827}.step p{color:#64748B}
+.cta{padding:42px;border-radius:20px;border:1px solid #DCE5F5;background:#FFFFFF;box-shadow:0 6px 24px #0F172A06}
+.cta h2{color:#111827}.cta p{color:#64748B}
+footer{border-top:1px solid #E5E7EB;color:#64748B}
+.social-links a:hover{color:#2563EB}
+.reveal{opacity:0;transform:translateY(12px);transition:opacity .5s ease,transform .5s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes pulse{50%{opacity:1}}
+@media(max-width:800px){
+ .wrap{width:min(100% - 32px,600px)}
+ .hero{min-height:0;padding:42px 0 62px;gap:12px}
+ .visual{min-height:330px}
+ .orbit.two{width:300px;height:300px}.orbit{width:255px;height:255px}.orb{width:245px;height:245px}
+ .metrics{margin-top:0}
+ .metric{padding:16px 19px}
+ .metric+.metric{border-left:0;border-top:1px solid #E5E7EB}
+ section{padding:64px 0}
+ .projects,.services{grid-template-columns:1fr}
+ .project{padding:20px}
+ .cta{padding:28px}
+}
+@media(max-width:420px){
+ .wrap{width:calc(100% - 28px)}
+ .hero{padding-top:32px}
+ h1{font-size:clamp(39px,11vw,52px)}
+ .visual{min-height:300px}
+ .codecard{padding:18px}
+ .code{font-size:12px}
+ .float-tag{font-size:11px;padding:9px 11px}
+ .process{gap:20px 14px}
+}
+@media(prefers-reduced-motion:reduce){
+ *,*:before,*:after{animation:none!important;scroll-behavior:auto!important;transition:none!important}
+ .reveal{opacity:1;transform:none}
+}
+
 </style>
 </head>
 <body>
